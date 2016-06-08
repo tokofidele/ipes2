@@ -1,0 +1,45 @@
+ 
+
+<div ng-controller="gestion_specialite">
+    <div ng-controller="gestion_filiere">
+        <div ng-controller="gestion_diplome">
+
+            <p></p><p></p>
+            <center><div class="spinner" ng-show="loader.loading"><img src='css/images/loader.gif'></div></center>
+            <div class="ui-corner-all custom-corners">
+                <div class="ui-bar ui-bar-a">
+                    <h3> <font face="Times New Roman">{{labelle_etab}} :</font> </h3><br><font size="2"> <i> {{labelle_diplome}}</i></font><br> <font size="2"> <i>{{labelle_filiere}}</i></font><br> <font size="2"><i>Spécialités</i></font>
+
+
+                </div>
+                <div class="ui-body ui-body-a">
+                    <form>
+                        <input name="search-11" id="search-131"  type="search">
+                    </form>
+
+                    <ul data-role="listview" data-inset="true" data-filter="true" data-input="#search-131">                            
+
+                        <li ng-repeat="data in data_specialite" li-jq-mobile ng-click="go_id_specialite_rech_ipes(data.id_specialite, data.labelle_specialite)" ><a href=''>					
+
+
+                                <i> {{data.labelle_specialite}}</i><br/>
+
+
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</div>
+
+
+
+

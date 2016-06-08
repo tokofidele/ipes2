@@ -1,0 +1,99 @@
+<div ng-controller="liste_name_region">
+    <div ng-controller="controler_lire_annonce">
+
+
+
+        <p></p><p></p>
+        <center><div class="spinner" ng-show="loader.loading"><img src='css/images/loader.gif'></div></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div data-role="collapsibleset" data-theme="a" data-content-theme="a">
+
+            <div data-role="collapsible" ng-repeat="data in data_name_region" jqm-collapsible-repeat>
+
+                <h3 ng-click="name_region(data.nom_region)">{{data.nom_region}}</h3>
+                <p>
+
+                <div class="ui-corner-all custom-corners">
+                    <div class="ui-bar ui-bar-a">
+                        <h3> <font face="Times New Roman">Liste des ipes</font> </h3>
+
+                    </div>
+                    <div class="ui-body ui-body-a">
+                        <form>
+                            <input name="search-11" id="search-121"  type="search">
+                        </form>
+
+                        <ul data-role="listview" data-inset="true" data-filter="true" data-input="#search-121">                            
+
+
+                            <div data-role="collapsibleset" data-theme="a" data-content-theme="a">
+                                <div data-role="collapsible" ng-repeat="data in data_annonce_ipes" jqm-collapsible-repeat>
+
+                                    <h3>{{data.nom_ipes}}</h3>
+                                    <p>
+
+
+                                        <label for="textinput-f"><center><b>{{data.nom_ipes}}</b></center></label>
+                                        <label for="textinput-f"><b>{{data.titre_annonce}}</b></label>
+                                        <label for="textinput-f">{{data.labelle_annonce}}</label>
+                                        <label for="textinput-f"><b>{{data.date_annonce}}</b></label>  
+                                </div>
+                            </div>
+
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+        <!--     
+           <div data-role="collapsible" data-theme="a" ng-repeat="data in data_name_region" jqm-collapsible-repeat data-content-theme="a"  ng-click="name_region(data.nom_region)">
+               <h2 ng-click="name_region(data.nom_region)">{{data.nom_region}}</h2>
+       
+               <ul data-role="listview" data-filter="true">  
+                   <div data-role="collapsible" data-iconpos="right" data-collapsed="true"   ng-repeat="data in data_annonce_ipes" jqm-collapsible-repeat>
+                       <h2>{{data.nom_ipes}}</h2>
+                       <ul data-role="listview" data-theme="a" data-divider-theme="q">
+                           <li data-role="list-divider">{{data.date_annonce}}</li>
+                             <li data-role="list-divider">{{data.titre_annonce}}</li>
+                           <li>
+                               <img src='css/images/{{data.image}}'>
+                             
+                               <p>{{data.labelle_annonce}}</p>
+       
+                           </li>
+       
+                       </ul>
+                   </div>
+               </ul>
+           </div>
+             
+        --> 
+
+    </div>
+</div>
+
+
+

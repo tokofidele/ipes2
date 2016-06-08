@@ -1,0 +1,69 @@
+ 
+<div ng-controller="gestion_option">
+    <div ng-controller="gestion_specialite">
+        <div ng-controller="gestion_filiere">
+            <div ng-controller="gestion_diplome">
+
+                <p></p><p></p>
+
+                <center><div class="spinner" ng-show="loader.loading"><img src='css/images/loader.gif'></div></center>
+                <div class="ui-corner-all custom-corners">
+                    <div class="ui-bar ui-bar-a" ng-repeat="data_name in data_element_filiere">
+                        <h3> <font face="Times New Roman" >{{data_name.labelle_etab}} :</font> </h3><br><font size="2"> <i> {{data_name.labelle_diplome}}</i></font><br> <font size="2"> <i>{{labelle_filiere}}</i></font><br> <font size="2"><i>{{labelle_specialite}}</i></font>
+
+                        <br> <font size="2"> <i>Grille des enseignements</i></font>
+                    </div>
+                    <div class="ui-body ui-body-a" scroll>
+
+                        <ul data-role="listview" data-inset="true" data-filter="true" data-input="#search-121">                            
+
+
+
+                            <!-- la directive scrool permet de mettre les scrollbar dans la div et data-anchor pcq c un tableau -->
+
+                            <table data-role="table"  data-mode="reflow" class="ui-responsive table-stroke" data-anchor>
+
+                                <thead>
+                                    <tr class="th-groups">
+                                        <th data-priority="persist">Semestre</th>
+                                        <th data-priority="persist">Unite Enseignement</th>
+                                        <th data-priority="persist">Durée cours magistral</th>
+                                        <th data-priority="persist"><abbr title="Rotten Tomato Rating">Durée travaux dirrigés</abbr></th>
+                                        <th data-priority="persist">Durée travaux pratique</th>
+                                        <th data-priority="persist">Obligatoire</th>
+                                        <th data-priority="persist">Credits</th>
+                                    </tr>
+                                </thead>
+                                <tbody  ng-repeat="data in data_UE">
+                                    <tr>
+                                        <th>{{data.labelle_semestre_ue}}</th>
+                                        <td>{{data.labelle_unite_e}}</td>
+                                        <td>{{data.duree_cour_magistraux}} Heures</td>
+                                        <td>{{data.duree_td}} Heures</td>
+                                        <td>{{data.duree_tp}} Heures</td>
+                                        <td>{{data.obligatoire}}</td>
+                                        <td>{{data.nb_credit}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+
+
+                        </ul>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+

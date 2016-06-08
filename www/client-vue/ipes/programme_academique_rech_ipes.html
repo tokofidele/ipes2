@@ -1,0 +1,83 @@
+ 
+<div ng-controller="gestion_option">
+    <div ng-controller="gestion_specialite">
+        <div ng-controller="gestion_filiere">
+            <div ng-controller="gestion_diplome">
+
+
+                <p></p><p></p>
+                <center><div class="spinner" ng-show="loader.loading"><img src='css/images/loader.gif'></div></center>
+
+
+
+                <div class="ui-corner-all custom-corners">
+                    <div class="ui-bar ui-bar-a">
+                        <h3> <font face="Times New Roman">{{labelle_etab}} :</font> </h3><br><font size="2"> <i> {{labelle_diplome}}</i></font><br> <font size="2"> <i>{{labelle_filiere}}</i></font><br> <font size="2"><i>{{labelle_specialite}}</i></font>
+
+                        <br> <font size="2"> <i>Programme académique</i></font>
+                    </div>
+                    <div class="ui-body ui-body-a">
+
+                        <ul data-role="listview" data-inset="true" data-filter="true" data-input="#search-121">                            
+
+
+
+                            <!-- la directive scrool permet de mettre les scrollbar dans la div et data-anchor pcq c un tableau -->
+
+
+                            <div ng-repeat="data in programme_academique" jqm-collapsible-repeat>      
+                                <div class="ui-body ui-body-a ui-corner-all">
+                                    <b>Forme suivie cour : </b>{{data.forme_suivie}}
+
+                                </div>      
+
+                                <div class="ui-body ui-body-a ui-corner-all">
+                                    <b>Pré-requis :  </b>{{data.pre_requis}}
+
+                                </div> 
+
+                                <div class="ui-body ui-body-a ui-corner-all">
+                                    <b>Durée : </b>{{data.duree}}
+
+                                </div>
+
+
+                                <div class="ui-body ui-body-a ui-corner-all">
+                                    <b>Cours du jour : </b>{{data.cour_jour}}</br>
+                                    <b>Date concour :  </b>{{data.date_concour_cour_jour}}</br>
+                                    <b>Date rentrée scolaire :  </b>{{data.date_rentree_jour}}</br>
+                                    <b>Frais d'étude par année :</b></br>
+                                    <b> Inscription : </b>{{data.inscription_cour_jour}} FCFA  </br>
+                                    <b> Pension : </b> {{data.pension_cour_jour}}   FCFA
+
+                                </div>
+
+                                <div class="ui-body ui-body-a ui-corner-all">
+                                    <b>Cours du soir : </b>{{data.cour_soir}}</br>
+                                    <b>Date concour :  </b>{{data.date_concour_cour_soir}}</br>
+                                    <b>Date rentrée scolaire :  </b>{{data.date_rentree_soir}}</br>
+                                    <b>Frais d'étude par année :</b></br>
+                                    <b>  Inscription : </b>{{data.inscription_cour_soir}} FCFA  </br>
+                                    <b> Pension : </b>  {{data.pension_cour_soir}}  FCFA
+
+                                </div>
+
+                            </div>
+
+
+
+                        </ul>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+

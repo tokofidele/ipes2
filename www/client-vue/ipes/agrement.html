@@ -1,0 +1,37 @@
+ 
+<p></p><p></p>
+<div ng-controller="gestion_etablissement">
+
+
+
+    <p></p><p></p>
+     <center><div class="spinner" ng-show="loader.loading"><img src='css/images/loader.gif'></div></center>
+
+    <div class="ui-corner-all custom-corners">
+        <div class="ui-bar ui-bar-a">
+            <h3><font face="Times New Roman">Agrément</font></h3>
+        </div>
+        <div class="ui-body ui-body-a">
+
+            <div data-role="collapsibleset" data-theme="a" data-content-theme="a" ng-repeat="data in data_agrement" jqm-collapsible-repeat>
+
+                <div data-role="collapsible">
+                    <h3>Accord de création</h3>
+                    <p>{{data.accord_creation_ipes}}</p>
+
+                </div>
+
+                <div data-role="collapsible">
+                    <h3>Autorisation d’ouverture</h3>
+                    <p>{{data.auto_ouverture_ipes}}</p>
+                </div>
+
+
+            </div>      
+
+        </div>
+    </div>
+
+</div>
+
+

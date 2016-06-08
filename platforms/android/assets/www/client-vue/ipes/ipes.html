@@ -1,0 +1,35 @@
+ 
+
+<div ng-controller="head_nom_ipes">
+  
+<div ng-controller="presentation_content_ipes">
+        
+
+        <p></p><p></p>
+
+        <center><div class="spinner" ng-show="loader.loading"><img src='css/images/loader.gif'></div></center>
+        <div class="ui-corner-all custom-corners">
+            <div class="ui-bar ui-bar-a">
+
+                <h3><font face="Times New Roman">Présentation </font></h3>
+            </div>
+            
+            <div class="ui-body ui-body-a">
+                <p ng-repeat="data_presentation in region_presentation_ipes">{{data_presentation.presentation}}</p>
+            </div>
+         
+       <!--  
+             <form>
+                 
+                <label for="slider-1">Votre appreciation:</label>
+                <input type="range" name="slider-1" id="slider-1" min="0" max="100" value="40" ng-change="update1(value)" data-popup-enabled="true">
+     
+             </form>
+
+      -->
+        </div>
+ 
+    </div>
+    
+</div>
+

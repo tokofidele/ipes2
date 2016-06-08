@@ -1,0 +1,66 @@
+ 
+
+<div ng-controller="gestion_etablissement">
+
+    <p></p><p></p>
+    <center><div class="spinner" ng-show="loader.loading"><img src='css/images/loader.gif'></div></center>
+
+    <div class="ui-corner-all custom-corners">
+        <div class="ui-bar ui-bar-a">
+            <h3><font face="Times New Roman">Adresse</font></h3>
+        </div>
+        <div class="ui-body ui-body-a"  ng-repeat="data in data_adresse" jqm-collapsible-repeat> 
+
+            <div class="ui-body ui-body-a ui-corner-all">
+                <b>site web :  </b>{{data.site_web_ipes}} 
+
+               
+                <ul data-role="listview" data-inset="true">
+                    <li><a href="{{data.site_web_ipes}}" target="_blank">Visiter le site web </a></li>
+
+                </ul>
+
+
+
+            </div>
+
+            <div class="ui-body ui-body-a ui-corner-all">
+                <b>Téléphone : </b> {{data.telephone_ipes}}
+
+            </div>
+
+            <div class="ui-body ui-body-a ui-corner-all">
+                <b>Boite postale : </b> {{data.boite_postale_ipes}}
+
+            </div>
+
+            <div class="ui-body ui-body-a ui-corner-all">
+                <b>Fax : </b> {{data.fax_ipes}}
+
+            </div>
+
+            <div class="ui-body ui-body-a ui-corner-all">
+                <b>Adresse electronique : </b> {{data.mail}}
+
+            </div>
+
+            <div class="ui-body ui-body-a ui-corner-all">
+                <b>liste des quartiers :  </b> 
+                <p>
+                <div class="ui-body ui-body-a ui-corner-all"  ng-repeat="data in data_quartier">
+                    {{data.labelle_quartier}}
+
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+
+
+
+</div>
+
+
+
+
